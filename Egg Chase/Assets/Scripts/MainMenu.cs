@@ -25,9 +25,19 @@ public class MainMenu : MonoBehaviour {
     public void PlayGame()
     {
         currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
-        Debug.Log("CurrentLevel = " + currentLevel);
-        SceneManager.LoadScene(currentLevel);
-        Debug.Log("Load Scene " + currentLevel);
+        if (currentLevel == 0)
+        {
+            Debug.Log("currentLevel = 0 Now = " + currentLevel);
+            currentLevel = 1; //Load Level 1 build index
+            SceneManager.LoadScene(currentLevel);
+        }
+        else
+        {
+            Debug.Log("currentLevel " + currentLevel);
+
+            SceneManager.LoadScene(currentLevel);
+        }
+
     }
 
     public void QuitGame()
