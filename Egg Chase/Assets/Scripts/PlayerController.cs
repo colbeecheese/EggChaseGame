@@ -182,15 +182,5 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Firebase Reference" + FirebaseDatabase.DefaultInstance.GetReference("Level" + currentLevel));
     }
 
-    void UpdateFirebaseDataHorses()
-    {
-//        FirebaseDatabase.DefaultInstance.GetReference("Level" + currentLevel).Child(currentSystemTime).SetValueAsync(timerText.text);
-
-    }
-
-    void ReadFirebaseDataHorses()
-    {
-
-    }
 
 }
